@@ -14,6 +14,7 @@ export class HttpService {
       console.log("got our tasks!", data)
       for (var i in data){
         this.getOneTask(data[i]._id)
+        this.getPokemon(60);
       }
     });
 
@@ -22,6 +23,12 @@ export class HttpService {
     let tempObservable = this._http.get('/tasks/'+id);
     tempObservable.subscribe(data => {
       console.log("got our one specific task", data);
-    })
+    });
+  }
+  getPokemon(num){
+    let tempObservable = this._http.get('https://pokeapi.co/api/v2/pokemon/'+ num +'/');
+    tempObservable.subscribe(data => {
+      console.log("got a pokemon as well", data.name)
+    });
   }
 }
