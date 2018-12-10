@@ -9,27 +9,15 @@ export class HttpService {
     //  this.getTasks();
    }
   getTasks(){
-    // let tempObservable = this._http.get('/tasks');
-    // tempObservable.subscribe(data => {
-    //   console.log("got our tasks!", data)
-    //   for (var i in data){
-    //     this.getOneTask(data[i]._id)
-    //     this.getPokemon(60);
-
-    //   }
-    // });
     return this._http.get('/tasks');
   }
-  getOneTask(id){
-    let tempObservable = this._http.get('/tasks/'+id);
-    tempObservable.subscribe(data => {
-      console.log("got our one specific task", data);
-    });
+  addTask(newtask){
+    return this._http.post('/tasks', newtask);
+  } 
+  submitChange(id, body){
+    return this._http.put('/tasks/'+id, body);
   }
-  getPokemon(num){
-    let tempObservable = this._http.get('https://pokeapi.co/api/v2/pokemon/'+ num +'/');
-    tempObservable.subscribe(data => {
-      console.log("got a pokemon as well", data.name)
-    });
+  deleteItem(id){
+    return this._http.delete('/tasks/'+id)
   }
 }

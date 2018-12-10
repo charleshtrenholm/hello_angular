@@ -1,4 +1,128 @@
-.taskDisplay{
+/* .taskDisplay{
     background-color: black;
     color: red;
+} */
+
+*{
+    background-color: none;
+}
+
+form{
+    width: 60%;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+body{
+    background-image: linear-gradient(lightpink, lightgoldenrodyellow, lightgreen, lightseagreen);
+}
+
+.row{
+    width: 80%;
+}
+
+input, submit{
+    margin-top: 10px;
+}
+
+#scorenav, #activities_header{
+    background-color: darkslategray;
+    color: white;
+}
+
+#scorenav{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+body{
+    width: 100%;
+}
+
+#startover{
+    float: right;
+    margin-right: 20px;
+}
+
+.itemclick{
+    height: 150px;
+}
+
+h2{
+    text-align: center;
+    padding: 5px; 
+    margin-bottom: 0px;
+}
+h3{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+
+.taskContainer{
+    padding: 20px;
+    border: 1px black solid;
+    width: 80%;
+    margin: 0px auto;
+}
+
+#bigTaskContainer{
+    width: 80%;
+    margin: 0px auto;
+}
+
+#activities{
+    height: 400px;
+    overflow: scroll;
+    background-image: linear-gradient(lightpink, lightgoldenrodyellow, lightgreen, lightseagreen);
+    margin-top: 0px;
+}
+
+#activities_header{
+    width: 100%;
+}
+
+.activitylog{
+    font-size: 30px;
+}
+
+.activitylog, .ugh{
+    margin-left: 20%;
+}
+
+input{
+    width: 100%;
+}
+
+button{
+    margin: 20px;
+}
+
+.btn{
+    border-radius: 40px;
+    box-shadow: 2px 2px 0px black;
+}
+
+.goldButton{
+    margin: 0px auto !important;
+}
+
+#farm{
+    background-color: lightpink;
+    width: 25%;
+}
+#house{
+    background-color: lightgreen;
+    width: 25%;
+}
+#cave{
+    background-color: lightgoldenrodyellow;
+    width: 25%;
+}
+#casino{
+    background-color: lightseagreen;
+    width: 25%;
 }
