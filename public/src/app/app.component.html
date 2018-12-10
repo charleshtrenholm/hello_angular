@@ -10,6 +10,8 @@
 
 <body>
 
+<app-show *ngIf="selectedTask" [taskToShow]="selectedTask" class="appShow"></app-show>
+
 <form (submit)="onSubmit()">
   <input type="text" name="newTask.title" [(ngModel)]="newTask.title" />
   <input type="text" name="newTask.desc" [(ngModel)]="newTask.desc" />
@@ -23,6 +25,7 @@
       <h3 class="taskDescription">{{task.desc}}</h3>
       <button (click)="showEditor(task._id)" class="btn btn-dark">Edit</button>
       <button (click)="deleteItem(task._id)" class="btn btn-danger">Delete</button>
+      <button (click)="taskToShow(task)" class="btn btn-info">Show Details</button>
       <div *ngIf="task.edited == true">
         <form (submit)="onEditSubmit(editedTask._id)">
           <div class="form-group">
@@ -32,7 +35,6 @@
             <input type="text" class="form-control" id="taskDesc" name="editedTask.desc" [(ngModel)]="editedTask.desc" value="{{editedTask.desc}}" />
             <input type="submit" value="submit" class="btn btn-dark">
           </div>
-
         </form>
       </div>
     </div>

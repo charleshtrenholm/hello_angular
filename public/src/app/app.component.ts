@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   title: string;
   score : number
   messages: any[]
+  selectedTask: any;
   public now: number
   constructor(private _httpService: HttpService){}
   ngOnInit(){
@@ -123,5 +124,7 @@ export class AppComponent implements OnInit {
       this.getTasks();
     })
   }
-  
+  taskToShow(task: any){
+    this.selectedTask = task;
+  }
 }
